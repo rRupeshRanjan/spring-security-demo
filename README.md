@@ -1,5 +1,5 @@
 
-###### Technology
+###### Technology:
 1. Java 8+
 2. Spring security - 2.3.1
 3. Spring Boot - 2.3.1
