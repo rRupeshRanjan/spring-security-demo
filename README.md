@@ -4,13 +4,13 @@
 2. Spring security - 2.3.1
 3. Spring Boot - 2.3.1
 4. Gradle 6.3
+5. H2 Database
 
 #
 ###### Models:
-1. User - contains basic details and associated roles
-2. Role - contains role name and respective privileges
-3. Privilege - contains privilege details
-
+1. User - contains basic details and associated roles. Data is being stored in "USER" table.
+2. Role - contains role name and respective privileges. Data is being stored in "ROLE" table.
+3. Privilege - contains privilege details. The data is being stored in "PRIVILEGE" table.
 
 #
 ###### Seed data setup (SetupDataLoader.java)
@@ -71,7 +71,7 @@ json like
 ###### Repositories 
 1. UserRepository.java, RoleRepository.java, PrivilegeRepository.java
     1. They extend JpaRespository provided along with spring data JPA.
-    2. These are used for fetching respective data from relevant tables.
+    2. These are used for fetching respective data from relevant tables in H2 database.
 2. AccessRepository.java
     1. Initializes mapping of resource access based on roles.
     2. This is used to check, given a resource and action type, does a User have access to it or not.
